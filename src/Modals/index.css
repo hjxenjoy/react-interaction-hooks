@@ -1,0 +1,135 @@
+.react-interaction-h5__wrapper {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.react-interaction-h5__wrapper * {
+  box-sizing: inherit;
+}
+
+.react-interaction-h5__wrapper .rih__toast,
+.react-interaction-h5__wrapper .rih__loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2199;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  min-width: 140px;
+  min-height: 80px;
+  border-radius: 6px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.react-interaction-h5__wrapper .rih__loading {
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.react-interaction-h5__wrapper .rih__loading::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f5f5f5;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: circle 1s infinite linear;
+}
+
+.react-interaction-h5__wrapper .rih_loading_desc {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.react-interaction-h5__wrapper .rih__alert,
+.react-interaction-h5__wrapper .rih__confirm,
+.react-interaction-h5__wrapper .rih__action-sheet {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 2099;
+  min-width: 240px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  color: #333;
+}
+
+.react-interaction-h5__wrapper .rih--title {
+  margin: 0;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.react-interaction-h5__wrapper .rih--content {
+  margin: 0;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.react-interaction-h5__wrapper .rih--title+.rih--content {
+  margin-top: -10px;
+  padding-top: 0;
+  color: #666;
+}
+
+.react-interaction-h5__wrapper .rih__footer {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-top: 1px solid #eee;
+}
+
+.react-interaction-h5__wrapper .rih_button {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0291bd;
+}
+
+.react-interaction-h5__wrapper .rih_button.rih_button_cancel {
+  color: #999;
+}
+
+.react-interaction-h5__wrapper .rih_button:focus {
+  outline: none;
+}
+
+.react-interaction-h5__wrapper .rih__action-sheet .rih__footer {
+  height: auto;
+  flex-direction: column;
+}
+
+.react-interaction-h5__wrapper .rih__action-sheet .rih_button {
+  flex: 0 0 40px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-interaction-h5__wrapper .rih__action-sheet .rih_button+.rih_button {
+  border-top: 1px solid #eee;
+}

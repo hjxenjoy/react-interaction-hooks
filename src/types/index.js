@@ -1,0 +1,6 @@
+export const CREATE_CONFIRM = '@interaction/CREATE_CONFIRM'
+export const CREATE_LOADING = '@interaction/CREATE_LOADING'
+export const CREATE_ACTION_SHEET = '@interaction/CREATE_ACTION_SHEET'
+export const CREATE_TOAST = '@interaction/CREATE_TOAST'
+export const CREATE_ALERT = '@interaction/CREATE_ALERT'
+export const DESTROY_ITEM = '@interaction/DESTROY_ITEM'
