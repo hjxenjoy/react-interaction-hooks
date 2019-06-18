@@ -1,5 +1,5 @@
 import React from 'react'
-import { useInteraction } from '../dist'
+import { useInteraction } from '../src'
 
 function App() {
   const { alert, confirm, toast, loading, loaded, actionSheet } = useInteraction()
