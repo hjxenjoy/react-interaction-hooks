@@ -1,10 +1,12 @@
 {
-  "name": "react-interaction",
+  "name": "react-interaction-hooks",
   "version": "1.0.0",
   "description": "react interaction component like toast confirm alert...",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.config.dev.js"
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "prepublish": "rm -rf ./dist && npm run build",
+    "build": "webpack --config ./config/webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
