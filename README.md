@@ -2,6 +2,12 @@
 
 React Interaction Hooks like toast/loading/alert/confirm/action-sheet
 
+## demo
+
+```sh
+npm start
+```
+
 ## install
 
 ```sh

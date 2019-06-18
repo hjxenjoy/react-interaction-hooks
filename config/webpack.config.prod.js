@@ -8,10 +8,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../dist'),
     filename: 'index.js',
-    library: 'ReactInteractionHooks',
-    libraryTarget: 'umd',
-    // publicPath: '/dist/',
-    umdNamedDefine: true,
+    // library: 'ReactInteractionHooks',
+    libraryTarget: 'commonjs2',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
