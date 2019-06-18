@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // https://itnext.io/how-to-package-your-react-component-for-distribution-via-npm-d32d4bf71b4f
 module.exports = {
@@ -6,10 +7,10 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'react-interaction-hooks.js',
+    filename: 'index.js',
     library: 'ReactInteractionHooks',
     libraryTarget: 'umd',
-    publicPath: '/dist/',
+    // publicPath: '/dist/',
     umdNamedDefine: true,
   },
   resolve: {
@@ -26,9 +27,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+          'postcss-loader',
+        ],
       },
     ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+  ],
+  optimization: {
+    // We no not want to minimize our code.
+    minimize: false,
   },
   externals: {
     // Don't bundle react or react-dom

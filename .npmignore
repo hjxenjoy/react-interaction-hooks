@@ -7,4 +7,6 @@ config
 .editorconfig
 .gitignore
 .babelrc
+.browserslistrc
+.postcssrc.js
 yarn.lock
