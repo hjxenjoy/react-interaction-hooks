@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/hjxenjoy/react-interaction#readme",
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,less}": [
+    "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint --fix",
       "git add"
     ]

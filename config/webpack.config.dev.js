@@ -11,6 +11,9 @@ module.exports = {
     path: path.join(__dirname, '../build'),
     filename: '[name].[hash:10].js',
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {
@@ -19,6 +22,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
