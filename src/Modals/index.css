@@ -77,12 +77,14 @@
   margin: 0;
   font-weight: 500;
   padding: 15px;
+  text-align: center;
 }
 
 .react-interaction-h5__wrapper .rih--content {
   margin: 0;
   padding: 15px;
   font-size: 14px;
+  text-align: center;
 }
 
 .react-interaction-h5__wrapper .rih--title+.rih--content {
