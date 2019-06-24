@@ -1,6 +1,6 @@
 {
   "name": "react-interaction-hooks",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "react interaction component like toast confirm alert...",
   "main": "dist/index.js",
   "typings": "./index.d.ts",
