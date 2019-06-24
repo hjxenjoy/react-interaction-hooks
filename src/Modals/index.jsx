@@ -11,10 +11,18 @@ import './index.css'
 
 function Modals(props) {
   const modalsRoot = useRef()
-  if (!modalsRoot.current) {
+  const { alert, confirm, actionSheet, toast, loading } = props
+  const hasContent =
+    alert.active || confirm.active || actionSheet.active || toast.active || loading.active
+
+  if (hasContent && !modalsRoot.current) {
     modalsRoot.current = document.createElement('div')
     modalsRoot.current.className = 'react-interaction-h5__wrapper'
     document.body.appendChild(modalsRoot.current)
+  }
+
+  if (!hasContent) {
+    return null
   }
 
   const modals = (

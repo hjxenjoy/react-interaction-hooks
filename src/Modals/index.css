@@ -7,6 +7,15 @@
   box-sizing: inherit;
 }
 
+.react-interaction-h5__wrapper .rih__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
 .react-interaction-h5__wrapper .rih__toast,
 .react-interaction-h5__wrapper .rih__loading {
   position: fixed;
@@ -75,8 +84,9 @@
 
 .react-interaction-h5__wrapper .rih--title {
   margin: 0;
-  font-weight: 500;
-  padding: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 15px 25px;
   text-align: center;
 }
 
